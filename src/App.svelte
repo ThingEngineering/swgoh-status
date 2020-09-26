@@ -1,10 +1,17 @@
 <script lang="ts">
-	export let name: string;
+	import { onMount } from 'svelte'
+	import { loading, fetch } from './stores/game-data'
+
+	onMount(() => fetch())
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>PANTS</h1>
+	{#if $loading}
+		<p>LOADING</p>
+	{:else}
+		<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	{/if}
 </main>
 
 <style>

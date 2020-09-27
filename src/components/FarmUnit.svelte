@@ -6,13 +6,12 @@
 
     const playerUnit = $units[farmUnit.name]
     const gameUnit = farmUnit.gear_level ? $characters[farmUnit.name] : $ships[farmUnit.name]
-    //console.log('characters', $characters)
-    //console.log('ships', $ships)
-    //console.log(playerUnit, gameUnit)
 
     const hasStars = playerUnit && (playerUnit.rarity >= farmUnit.stars)
     const hasGear = !farmUnit.gear_level || (playerUnit && (playerUnit.gear_level >= farmUnit.gear_level))
     const hasRelic = !farmUnit.gear_level || (playerUnit && (playerUnit.gear_level >= 13 && ((playerUnit.relic_tier - 2) >= farmUnit.relic_level)))
+
+    const hasCount = (hasStars | 0) + (hasGear | 0) + (hasRelic | 0)
 </script>
 
 <style>
@@ -23,14 +22,15 @@
         padding: 0 0.25em;
         white-space: nowrap;
     }
-    .image {
+    td.image {
         padding: 0;
+        width: 34px;
     }
-    .image img {
+    td.image img {
         margin-bottom: -1px;
     }
     .missing-character {
-        background: #ff0000 !important;
+        background: rgba(255, 0, 0, 0.8) !important;
     }
     .name {
         text-align: left;
@@ -47,15 +47,24 @@
     .missing {
         background: rgba(255, 0, 0, 0.2);
     }
-    .success {
-        background: rgba(0, 255, 0, 0.15);
+    .success-0 {
+        background: rgba(255, 65, 54, 0.3);
+    }
+    .success-1 {
+        background: rgba(255, 133, 27, 0.3);
+    }
+    .success-2 {
+        background: rgba(255, 220, 0, 0.3);
+    }
+    .success, .success-3 {
+        background: rgba(31, 255, 112, 0.25);
     }
 </style>
 
 <tr class:missing-character="{!playerUnit}">
     <td class="image"><img src="https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}"></td>
-    <td class="name {hasStars && hasGear && hasRelic ? 'success' : ''}">{farmUnit.name}</td>
     {#if playerUnit}
+        <td class="name {farmUnit.gear_level ? `success-${hasCount}` : (hasStars ? 'success' : '')}">{farmUnit.name}</td>
         <td class="left {hasStars ? 'success' : 'missing'}">{playerUnit.rarity}</td>
         <td class="slash {hasStars ? 'success' : 'missing'}">/</td>
         <td class="right {hasStars ? 'success' : 'missing'}">{farmUnit.stars}</td>
@@ -67,9 +76,9 @@
             <td class="slash {hasRelic ? 'success' : 'missing'}">/</td>
             <td class="right {hasRelic ? 'success' : 'missing'}">{farmUnit.relic_level}</td>
         {:else}
-            <td colspan="6" class:success="{hasStars && hasGear && hasRelic}"></td>
+            <td colspan="6" class:success="{hasStars}"></td>
         {/if}
     {:else}
-        <td colspan="9"></td>
+        <td colspan="10" class="name">{farmUnit.name}</td>
     {/if}
 </tr>

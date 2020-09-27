@@ -20,10 +20,10 @@
         padding: 0.25em;
     }
     .dark {
-        background: #ff0000;
+        background: rgba(255, 65, 54, 0.5);
     }
     .light {
-        background: #0000ff;
+        background: rgba(0, 116, 217, 0.5);
     }
     colgroup {
         border: 1px solid #585b5f;

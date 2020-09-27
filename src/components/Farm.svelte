@@ -32,18 +32,18 @@
 
 <table class="striped">
     <colgroup span="2"></colgroup>
-    <colgroup span="2" class="stars"></colgroup>
-    <colgroup span="2" class="gear"></colgroup>
-    <colgroup span="2" class="relic"></colgroup>
+    <colgroup span="3" class="stars"></colgroup>
+    <colgroup span="3" class="gear"></colgroup>
+    <colgroup span="3" class="relic"></colgroup>
     <thead>
         <tr>
-            <td colspan="8" class="{farm.side}">{farm.name}</td>
+            <td colspan="11" class="{farm.side}">{farm.name}</td>
         </tr>
         <tr>
             <th colspan="2">Name</th>
-            <th colspan="2">Stars</th>
-            <th colspan="2">Gear</th>
-            <th colspan="2">Relic</th>
+            <th colspan="3">Stars</th>
+            <th colspan="3">Gear</th>
+            <th colspan="3">Relic</th>
         </tr>
     </thead>
     <tbody>

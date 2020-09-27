@@ -1,4 +1,4 @@
-import { keyBy } from 'lodash'
+import { forEach, keyBy } from 'lodash'
 import { Writable, writable } from 'svelte/store'
 
 import fetch_json from '../utils/fetch-json'
@@ -17,9 +17,14 @@ export const fetch = async function() {
         })
 
         const parsed = JSON.parse(data)
-        console.log('parsed', parsed)
+
+        let sigh = {}
+        forEach(parsed.units, function(unit) {
+            sigh[unit.data.name] = unit.data
+        })
+
         player.set(parsed.data)
-        units.set(parsed.units)
+        units.set(sigh)
         loading.set(false)
     }
 }

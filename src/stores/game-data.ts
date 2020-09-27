@@ -1,5 +1,5 @@
 import { keyBy } from 'lodash'
-import {Writable, writable} from 'svelte/store'
+import { Writable, writable } from 'svelte/store'
 import getCachedData from '../utils/get-cached-data'
 
 import fetch_json from '../utils/fetch-json'
@@ -10,7 +10,7 @@ export const ships = writable({})
 
 export const fetch = async function() {
     await loadData('characters', characters)
-    await loadData('ships', characters)
+    await loadData('ships', ships)
 
     loading.set(false)
 }

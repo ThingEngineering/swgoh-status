@@ -4,10 +4,10 @@
 
 <style>
     h1 {
-        margin: 0;
+        margin: 0 0 0.25em 0;
     }
     h1 span {
-        color: #00aaff;
+        color: #ffff88;
         font-size: 1.2rem;
     }
 </style>

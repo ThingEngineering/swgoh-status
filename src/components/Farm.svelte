@@ -1,0 +1,57 @@
+<script>
+    import FarmUnit from './FarmUnit.svelte'
+
+    export let farm
+</script>
+
+<style>
+    table {
+        border: 1px solid #585b5f;
+        border-collapse: collapse;
+        margin-right: 2em;
+        margin-bottom: 2em;
+        width: 27em;
+    }
+    thead td {
+        font-size: 1.2rem;
+    }
+    th {
+        border: 1px solid #585b5f;
+        padding: 0.25em;
+    }
+    .dark {
+        background: #ff0000;
+    }
+    .light {
+        background: #0000ff;
+    }
+    colgroup {
+        border: 1px solid #585b5f;
+    }
+</style>
+
+<table class="striped">
+    <colgroup span="2"></colgroup>
+    <colgroup span="2" class="stars"></colgroup>
+    <colgroup span="2" class="gear"></colgroup>
+    <colgroup span="2" class="relic"></colgroup>
+    <thead>
+        <tr>
+            <td colspan="8" class="{farm.side}">{farm.name}</td>
+        </tr>
+        <tr>
+            <th colspan="2">Name</th>
+            <th colspan="2">Stars</th>
+            <th colspan="2">Gear</th>
+            <th colspan="2">Relic</th>
+        </tr>
+    </thead>
+    <tbody>
+        {#each farm.units as unit}
+            <FarmUnit farmUnit={unit} />
+        {/each}
+        {#each farm.ships as ship}
+            <FarmUnit farmUnit={ship} />
+        {/each}
+    </tbody>
+</table>

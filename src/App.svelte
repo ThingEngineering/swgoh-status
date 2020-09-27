@@ -1,26 +1,29 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import gameData from './stores/game-data'
-	import playerData from './stores/player-data'
 
+	import { loading as gameLoading, fetch as gameFetch } from './stores/game-data'
+	import { loading as playerLoading, fetch as playerFetch } from './stores/player-data'
+
+	import FarmStatus from './components/FarmStatus.svelte'
 	import PlayerInfo from './components/PlayerInfo.svelte'
 
-	onMount(() => gameData.fetch())
-	onMount(() => playerData.fetch())
+	onMount(() => gameFetch())
+	onMount(() => playerFetch())
 </script>
 
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
+		padding: 0 1em;
 		margin: 0 auto;
 	}
 </style>
 
 <main>
-	{#if gameData.$loading || playerData.$loading}
+	{#if $gameLoading || $playerLoading}
 		<p>LOADING</p>
 	{:else}
 		<PlayerInfo />
+		<FarmStatus />
 	{/if}
 </main>

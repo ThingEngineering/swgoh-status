@@ -11,8 +11,8 @@
     //console.log(playerUnit, gameUnit)
 
     const hasStars = playerUnit && (playerUnit.rarity >= farmUnit.stars)
-    const hasGear = playerUnit && (playerUnit.gear_level >= farmUnit.gear_level)
-    const hasRelic = playerUnit && (playerUnit.gear_level >= 13 && ((playerUnit.relic_tier - 2) >= farmUnit.relic_level))
+    const hasGear = !farmUnit.gear_level || (playerUnit && (playerUnit.gear_level >= farmUnit.gear_level))
+    const hasRelic = !farmUnit.gear_level || (playerUnit && (playerUnit.gear_level >= 13 && ((playerUnit.relic_tier - 2) >= farmUnit.relic_level)))
 </script>
 
 <style>
@@ -67,7 +67,7 @@
             <td class="slash {hasRelic ? 'success' : 'missing'}">/</td>
             <td class="right {hasRelic ? 'success' : 'missing'}">{farmUnit.relic_level}</td>
         {:else}
-            <td colspan="6"></td>
+            <td colspan="6" class:success="{hasStars && hasGear && hasRelic}"></td>
         {/if}
     {:else}
         <td colspan="9"></td>

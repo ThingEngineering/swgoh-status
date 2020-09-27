@@ -53,7 +53,7 @@
 </style>
 
 <tr class:missing-character="{!playerUnit}">
-    <td class="image"><img src="https://swgoh.gg{gameUnit.image}" width="32" height="32"></td>
+    <td class="image"><img src="https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}"></td>
     <td class="name {hasStars && hasGear && hasRelic ? 'success' : ''}">{farmUnit.name}</td>
     {#if playerUnit}
         <td class="left {hasStars ? 'success' : 'missing'}">{playerUnit.rarity}</td>

@@ -44,11 +44,8 @@
     .right {
         padding-left: 0;
     }
-    .missing {
+    .missing, .success-0 {
         background: rgba(255, 0, 0, 0.2);
-    }
-    .success-0 {
-        background: rgba(255, 65, 54, 0.3);
     }
     .success-1 {
         background: rgba(255, 133, 27, 0.3);

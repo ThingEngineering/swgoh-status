@@ -1,6 +1,6 @@
-export default async function fetch_json(request: RequestInfo): Promise<any> {
+export default async function fetch_json(request: RequestInfo): Promise<string> {
     return fetch(request)
         .then(response => {
-            return response.json()
+            return response.text()
         })
 }

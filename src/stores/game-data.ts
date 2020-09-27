@@ -1,5 +1,6 @@
 import { keyBy } from 'lodash'
 import {Writable, writable} from 'svelte/store'
+import getCachedData from '../utils/get-cached-data'
 
 import fetch_json from '../utils/fetch-json'
 
@@ -14,21 +15,17 @@ export const fetch = async function() {
     loading.set(false)
 }
 
-async function loadData(thing: string, thingStore: Writable<{}>) {
-    let data = {}
-    let fetch = true
+async function loadData(key: string, thingStore: Writable<{}>) {
+    const data = await getCachedData(key, 86400000, async () => {
+        return await fetch_json(`https://cors-anywhere.herokuapp.com/https://swgoh.gg/api/${key}/`)
+    })
 
-    const dataUpdated = localStorage.getItem(`${thing}_updated`)
-    if (dataUpdated !== null && (Number(dataUpdated) - Date.now()) < 86400000) {
-        fetch = false
-        data = JSON.parse(localStorage.getItem(thing))
-    }
+    thingStore.set(keyBy(JSON.parse(data), 'name'))
+}
 
-    if (fetch) {
-        data = await fetch_json(`https://cors-anywhere.herokuapp.com/https://swgoh.gg/api/${thing}/`)
-        localStorage.setItem(thing, JSON.stringify(data))
-        localStorage.setItem(`${thing}_updated`, String(Date.now()))
-    }
-
-    thingStore.set(keyBy(data, 'name'))
+export default {
+    loading,
+    characters,
+    ships,
+    fetch,
 }

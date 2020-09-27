@@ -2,6 +2,7 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
+import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
@@ -63,6 +64,7 @@ export default {
 			sourceMap: !production,
 			inlineSources: !production
 		}),
+		postcss(),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

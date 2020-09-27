@@ -5,7 +5,8 @@ html, body {
 }
 
 body {
-	color: #333;
+	background: #202428;
+	color: #EEE;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
@@ -13,7 +14,7 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: #00aaff;
 	text-decoration: none;
 }
 
@@ -22,7 +23,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: #0088dd;
 }
 
 label {

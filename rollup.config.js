@@ -1,3 +1,4 @@
+import fs from 'fs';
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -6,6 +7,10 @@ import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import posthtml from 'posthtml';
+import { hash } from 'posthtml-hash';
+import rimraf from 'rimraf';
+import copy from 'rollup-plugin-copy';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -30,22 +35,44 @@ function serve() {
 	};
 }
 
+function hashAssets() {
+	return {
+		name: 'hash-assets',
+		buildStart() {
+			rimraf.sync('build');
+		},
+		writeBundle() {
+			posthtml([
+				hash({ path: 'build' }),
+			])
+			.process(fs.readFileSync('build/index.html'))
+			.then((result) => fs.writeFileSync('build/index.html', result.html));
+		}
+	}
+}
+
 export default {
 	input: 'src/main.ts',
 	output: {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		file: 'public/build/bundle.[hash].js'
 	},
 	plugins: [
+		copy({
+			targets: [{
+				src: 'public/*',
+				dest: 'build',
+			}],
+		}),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
-				css.write('bundle.css');
+				css.write('bundle.[hash].css');
 			},
 			preprocess: sveltePreprocess(),
 		}),
@@ -72,11 +99,13 @@ export default {
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
-		!production && livereload('public'),
+		!production && livereload('build'),
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser(),
+
+		production && hashAssets()
 	],
 	watch: {
 		clearScreen: false

@@ -3,7 +3,6 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
-import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
@@ -43,10 +42,10 @@ function hashAssets() {
 		},
 		writeBundle() {
 			posthtml([
-				hash({ path: 'build' }),
+				hash({ path: 'build/' }),
 			])
-			.process(fs.readFileSync('build/index.html'))
-			.then((result) => fs.writeFileSync('build/index.html', result.html));
+			.process(fs.readFileSync('./build/index.html'))
+			.then((result) => fs.writeFileSync('./build/index.html', result.html));
 		}
 	}
 }
@@ -54,10 +53,10 @@ function hashAssets() {
 export default {
 	input: 'src/main.ts',
 	output: {
-		sourcemap: true,
+		sourcemap: !production,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.[hash].js'
+		file: 'build/bundle.[hash].js'
 	},
 	plugins: [
 		copy({
@@ -72,7 +71,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
-				css.write('bundle.[hash].css');
+				css.write('bundle.[hash].css', !production);
 			},
 			preprocess: sveltePreprocess(),
 		}),
@@ -91,7 +90,6 @@ export default {
 			sourceMap: !production,
 			inlineSources: !production
 		}),
-		postcss(),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

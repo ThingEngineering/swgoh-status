@@ -62,3 +62,11 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+table.striped > tbody > tr:nth-child(even) {
+	background: #282b2f;
+}
+
+table.striped > tbody > tr:nth-child(odd) {
+	background: #383b3f;
+}

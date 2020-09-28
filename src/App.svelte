@@ -5,6 +5,7 @@
 	import { loading as playerLoading, fetch as playerFetch } from './stores/player-data'
 
 	import FarmStatus from './components/FarmStatus.svelte'
+	import Footer from './components/Footer.svelte'
 	import PlayerInfo from './components/PlayerInfo.svelte'
 
 	onMount(() => gameFetch())
@@ -26,4 +27,5 @@
 		<PlayerInfo />
 		<FarmStatus />
 	{/if}
+	<Footer />
 </main>

@@ -81,7 +81,7 @@ export default [
             new FarmUnit('Wedge Antilles', 7, 13, 3),
         ],
         [
-            new FarmUnit('Rebel Y-wing', 5),
+            new FarmUnit('Rebel Y-wing', 6),
         ],
     ),
     new Farm(

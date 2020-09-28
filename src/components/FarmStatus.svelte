@@ -10,7 +10,7 @@
         grid-template-columns: repeat(auto-fit, 27em);
         grid-gap: 2em;
         justify-content: center;
-        margin: 0 1em;
+        margin: 0 1em 2em 1em;
     }
     @media (min-width: 1600px) {
         div {

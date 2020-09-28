@@ -14,8 +14,8 @@
 <style>
 	main {
 		text-align: center;
-		padding: 0 1em;
 		margin: 0 auto;
+		padding: 0;
 	}
 </style>
 

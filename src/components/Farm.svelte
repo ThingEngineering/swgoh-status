@@ -8,8 +8,6 @@
     table {
         border: 1px solid #585b5f;
         border-collapse: collapse;
-        margin-right: 2em;
-        margin-bottom: 2em;
         width: 27em;
     }
     thead td {

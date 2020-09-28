@@ -6,8 +6,11 @@
 
 <style>
     div {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 27em);
+        grid-gap: 2em;
+        justify-content: center;
+        margin: 0 1em;
     }
 </style>
 

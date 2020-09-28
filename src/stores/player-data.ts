@@ -10,7 +10,8 @@ export const player = writable({})
 export const units = writable({})
 
 export const fetch = async function() {
-    const match = document.location.search.match(/^\?player=(\d{9,})$/)
+    const search = document.location.search.replace(/-/g, '')
+    const match = search.match(/^\?player=(\d{9,})$/)
     if (match) {
         const player_id = match[1]
         const data = await getCachedData(`player_${player_id}`, 3600000, async () => {

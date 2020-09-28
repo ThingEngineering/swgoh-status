@@ -1,5 +1,5 @@
 <script>
-    import legends from '../data/galactic-legends'
+    import farms from '../data/farms'
 
     import Farm from './Farm.svelte'
 </script>
@@ -20,7 +20,7 @@
 </style>
 
 <div>
-    {#each legends as legend}
-        <Farm farm={legend}/>
+    {#each farms as farm}
+        <Farm farm={farm}/>
     {/each}
 </div>

@@ -29,6 +29,9 @@
     td.image img {
         margin-bottom: -1px;
     }
+    a {
+        color: #EEE;
+    }
     .missing-character {
         background: rgba(255, 0, 0, 0.8) !important;
     }
@@ -59,9 +62,15 @@
 </style>
 
 <tr class:missing-character="{!playerUnit}">
-    <td class="image"><img src="https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}"></td>
+    <td class="image">
+        <a href="{gameUnit.url}">
+            <img src="https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}">
+        </a>
+    </td>
     {#if playerUnit}
-        <td class="name {farmUnit.gear_level ? `success-${hasCount}` : (hasStars ? 'success' : 'success-2')}">{farmUnit.name}</td>
+        <td class="name {farmUnit.gear_level ? `success-${hasCount}` : (hasStars ? 'success' : 'success-2')}">
+            <a href="{gameUnit.url}">{farmUnit.name}</a>
+        </td>
         <td class="left {hasStars ? 'success' : 'missing'}">{playerUnit.rarity}</td>
         <td class="slash {hasStars ? 'success' : 'missing'}">/</td>
         <td class="right {hasStars ? 'success' : 'missing'}">{farmUnit.stars}</td>
@@ -76,6 +85,8 @@
             <td colspan="6" class:success="{hasStars}"></td>
         {/if}
     {:else}
-        <td colspan="10" class="name">{farmUnit.name}</td>
+        <td colspan="10" class="name">
+            <a href="{gameUnit.url}">{farmUnit.name}</a>
+        </td>
     {/if}
 </tr>

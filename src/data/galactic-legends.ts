@@ -59,6 +59,8 @@ export default [
             new FarmUnit('Wampa', 7, 13, 3),
         ],
         [
+            new FarmUnit('Han\'s Millennium Falcon', 7),
+            new FarmUnit('Wedge Antilles\'s X-wing', 7),
         ],
     ),
     new Farm(

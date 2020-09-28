@@ -13,7 +13,7 @@ export const fetch = async function() {
     if (match) {
         const player_id = match[1]
         const data = await getCachedData(`player_${player_id}`, 3600000, async () => {
-            return await fetch_json(`https://cors-anywhere.herokuapp.com/https://swgoh.gg/api/player/${player_id}/`)
+            return await fetch_json(`https://swgoh.gg/api/player/${player_id}/`)
         })
 
         const parsed = JSON.parse(data)

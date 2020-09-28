@@ -17,7 +17,7 @@ export const fetch = async function() {
 
 async function loadData(key: string, thingStore: Writable<{}>) {
     const data = await getCachedData(key, 86400000, async () => {
-        return await fetch_json(`https://cors-anywhere.herokuapp.com/https://swgoh.gg/api/${key}/`)
+        return await fetch_json(`https://swgoh.gg/api/${key}/`)
     })
 
     thingStore.set(keyBy(JSON.parse(data), 'name'))

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 
-	import { loading as gameLoading, fetch as gameFetch } from './stores/game-data'
-	import { loading as playerLoading, fetch as playerFetch } from './stores/player-data'
+	import { error as gameError, loading as gameLoading, fetch as gameFetch } from './stores/game-data'
+	import { error as playerError, loading as playerLoading, fetch as playerFetch } from './stores/player-data'
 
 	import FarmStatus from './components/FarmStatus.svelte'
 	import Footer from './components/Footer.svelte'
@@ -21,7 +21,9 @@
 </style>
 
 <main>
-	{#if $gameLoading || $playerLoading}
+	{#if $gameError || $playerError}
+		<p>KABOOM! Something has gone horribly wrong, try reloading the page?</p>
+	{:else if $gameLoading || $playerLoading}
 		<p>LOADING</p>
 	{:else}
 		<PlayerInfo />

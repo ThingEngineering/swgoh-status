@@ -6,6 +6,12 @@ export default async function getCachedData(key: string, max_age: Number, getDat
     }
     else {
         const data = await getDataFunc()
+        if (data === null) {
+            localStorage.removeItem(key)
+            localStorage.removeItem(updated_key)
+            return null
+        }
+
         localStorage.setItem(key, data)
         localStorage.setItem(updated_key, String(Date.now()))
         return data

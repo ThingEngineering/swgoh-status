@@ -61,7 +61,7 @@
 <tr class:missing-character="{!playerUnit}">
     <td class="image"><img src="https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}"></td>
     {#if playerUnit}
-        <td class="name {farmUnit.gear_level ? `success-${hasCount}` : (hasStars ? 'success' : '')}">{farmUnit.name}</td>
+        <td class="name {farmUnit.gear_level ? `success-${hasCount}` : (hasStars ? 'success' : 'success-2')}">{farmUnit.name}</td>
         <td class="left {hasStars ? 'success' : 'missing'}">{playerUnit.rarity}</td>
         <td class="slash {hasStars ? 'success' : 'missing'}">/</td>
         <td class="right {hasStars ? 'success' : 'missing'}">{farmUnit.stars}</td>

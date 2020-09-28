@@ -64,7 +64,7 @@
 <tr class:missing-character="{!playerUnit}">
     <td class="image">
         <a href="{gameUnit.url}">
-            <img src="https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}">
+            <img src="https://imageproxy.freddie.wtf/32/https://swgoh.gg{gameUnit.image}" width="32" height="32" alt="{farmUnit.name}">
         </a>
     </td>
     {#if playerUnit}

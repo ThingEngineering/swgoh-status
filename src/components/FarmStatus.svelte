@@ -12,6 +12,11 @@
         justify-content: center;
         margin: 0 1em;
     }
+    @media (min-width: 1600px) {
+        div {
+            grid-template-columns: repeat(3, 27em);
+        }
+    }
 </style>
 
 <div>

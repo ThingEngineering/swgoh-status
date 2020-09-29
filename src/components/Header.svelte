@@ -42,6 +42,9 @@
         border: 1px solid #888;
         border-radius: 4px;
     }
+    label {
+        white-space: nowrap;
+    }
     button {
         background: #004488;
         color: #eee;

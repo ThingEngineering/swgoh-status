@@ -54,7 +54,7 @@
 <header>
     <div>
         <form>
-            <input type="text" name="player" placeholder="Ally code..." on:input={validate}>
+            <input type="text" name="player" aria-label="Ally code" placeholder="Ally code..." on:input={validate}>
             <button type="submit" disabled={!valid}>Go!</button>
         </form>
         <label>

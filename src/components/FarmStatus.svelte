@@ -10,12 +10,14 @@
 <style>
 </style>
 
-{#if $useCategories}
-    {#each categories as category}
-        <FarmCategory {...category} />
-    {/each}
-{:else}
-    {#each flat_categories as category}
-        <FarmCategory {...category} />
-    {/each}
-{/if}
+<main>
+    {#if $useCategories}
+        {#each categories as category}
+            <FarmCategory {...category} />
+        {/each}
+    {:else}
+        {#each flat_categories as category}
+            <FarmCategory {...category} />
+        {/each}
+    {/if}
+</main>

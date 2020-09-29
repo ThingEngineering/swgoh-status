@@ -23,8 +23,8 @@
         white-space: nowrap;
     }
     td.image {
-        padding: 0;
-        width: 34px;
+        padding: 0 1px 0 0;
+        width: 33px;
     }
     td.image img {
         margin-bottom: -1px;
@@ -35,8 +35,11 @@
     .missing-character {
         background: rgba(255, 0, 0, 0.8) !important;
     }
-    .name {
+    td.name {
         text-align: left;
+    }
+    td {
+        text-align: right;
     }
     .left {
         padding-right: 0;

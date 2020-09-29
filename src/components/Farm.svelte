@@ -12,6 +12,7 @@
     }
     thead td {
         font-size: 1.2rem;
+        text-align: center;
     }
     th {
         border: 1px solid #585b5f;

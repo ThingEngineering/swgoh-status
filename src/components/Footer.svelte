@@ -10,13 +10,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em;
+        padding: 0.75rem;
         border-top: 1px solid #303438;
         background: #2b2f33;
     }
     p {
         margin: 0;
-        text-align: left;
     }
 </style>
 

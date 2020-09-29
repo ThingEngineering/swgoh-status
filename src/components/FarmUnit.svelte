@@ -105,9 +105,13 @@
                     <td class="left {hasGear ? 'success' : 'missing'}">{playerUnit.gear_level}</td>
                     <td class="slash {hasGear ? 'success' : 'missing'}">/</td>
                     <td class="right {hasGear ? 'success' : 'missing'}">{farmUnit.gear_level}</td>
-                    <td class="left {hasRelic ? 'success' : 'missing'}">{playerUnit.gear_level >= 13 ? playerUnit.relic_tier - 2 : 0}</td>
-                    <td class="slash {hasRelic ? 'success' : 'missing'}">/</td>
-                    <td class="right {hasRelic ? 'success' : 'missing'}">{farmUnit.relic_level ?? 0}</td>
+                    {#if farmUnit.relic_level}
+                        <td class="left {hasRelic ? 'success' : 'missing'}">{playerUnit.gear_level >= 13 ? playerUnit.relic_tier - 2 : 0}</td>
+                        <td class="slash {hasRelic ? 'success' : 'missing'}">/</td>
+                        <td class="right {hasRelic ? 'success' : 'missing'}">{farmUnit.relic_level}</td>
+                    {:else}
+                        <td colspan="3" class="success"></td>
+                    {/if}
                 {:else}
                     <td colspan="6" class:success="{hasStars}"></td>
                 {/if}

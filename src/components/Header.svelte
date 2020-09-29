@@ -1,11 +1,10 @@
 <script>
     import { code, player } from '../stores/player-data'
+    import { useCategories } from '../stores/user-data'
     import matchPlayerId from '../utils/match-player-id'
 
     let valid = false
-
     function validate(event) {
-        console.log(event.target.value, matchPlayerId(event.target.value))
         valid = matchPlayerId(event.target.value) !== null
     }
 </script>
@@ -56,8 +55,12 @@
     <div>
         <form>
             <input type="text" name="player" placeholder="Ally code..." on:input={validate}>
-            <button type="submit" disabled="{!valid}">Go!</button>
+            <button type="submit" disabled={!valid}>Go!</button>
         </form>
+        <label>
+            <input type="checkbox" bind:checked={$useCategories}>
+            Use categories?
+        </label>
     </div>
     {#if $player.name}
         <h1>

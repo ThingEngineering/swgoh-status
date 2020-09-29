@@ -1,6 +1,6 @@
-import { Farm } from "../things/farm";
-import { FarmUnit } from "../things/farm-unit";
-import {FarmCategory} from "../things/farm-category";
+import { Farm } from '../things/farm'
+import { FarmUnit } from '../things/farm-unit'
+import { FarmCategory } from '../things/farm-category'
 
 export default new FarmCategory(
     'Galactic Legends',

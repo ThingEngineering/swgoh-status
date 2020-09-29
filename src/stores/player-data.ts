@@ -1,5 +1,5 @@
-import { forEach, keyBy } from 'lodash'
-import { Writable, writable } from 'svelte/store'
+import { forEach } from 'lodash'
+import { writable } from 'svelte/store'
 
 import fetch_json from '../utils/fetch-json'
 import getCachedData from '../utils/get-cached-data'

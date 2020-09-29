@@ -1,5 +1,8 @@
 <script>
-    import categories from '../data/categories'
+    import { flatten, forEach } from 'lodash'
+
+    import { categories, flat_categories } from '../data/categories'
+    import { useCategories } from '../stores/user-data'
 
     import FarmCategory from  './FarmCategory.svelte'
 </script>
@@ -7,6 +10,12 @@
 <style>
 </style>
 
-{#each categories as category}
-    <FarmCategory {...category} />
-{/each}
+{#if $useCategories}
+    {#each categories as category}
+        <FarmCategory {...category} />
+    {/each}
+{:else}
+    {#each flat_categories as category}
+        <FarmCategory {...category} />
+    {/each}
+{/if}

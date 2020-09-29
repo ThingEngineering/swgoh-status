@@ -1,4 +1,6 @@
 <script>
+    import { useCategories } from '../stores/user-data'
+
     import Farm from './Farm.svelte'
 
     export let name
@@ -27,7 +29,9 @@
 </style>
 
 <section>
-    <h2>{name}</h2>
+    {#if $useCategories}
+        <h2>{name}</h2>
+    {/if}
     <div>
         {#each farms as farm}
             <Farm farm={farm} />

@@ -35,6 +35,7 @@ export default new FarmCategory(
                 new FarmUnit('General Kenobi', 7, 12),
                 new FarmUnit('Padmé Amidala', 7, 12),
                 new FarmUnit('Shaak Ti', 7, 12),
+                spacer,
                 new FarmUnit('Asajj Ventress', 7, 12),
                 new FarmUnit('B1 Battle Droid', 7, 12),
                 new FarmUnit('B2 Super Battle Droid', 7, 12),

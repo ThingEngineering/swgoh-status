@@ -1,10 +1,30 @@
 import { Farm } from '../things/farm'
-import { FarmUnit } from '../things/farm-unit'
+import { FarmUnit, spacer } from '../things/farm-unit'
 import { FarmCategory } from '../things/farm-category'
 
 export default new FarmCategory(
     'Events',
     [
+        new Farm(
+            'Jedi Knight Luke Skywalker',
+            'event',
+            'light',
+            [
+                new FarmUnit('C-3PO', 7, 13, 3),
+                new FarmUnit('Captain Han Solo', 7, 13, 3),
+                new FarmUnit('Chewbacca', 7, 13, 3),
+                new FarmUnit('Commander Luke Skywalker', 7, 13, 3),
+                new FarmUnit('Darth Vader', 7, 13, 3),
+                new FarmUnit('Hermit Yoda', 7, 13, 3),
+                new FarmUnit('Lando Calrissian', 7, 13, 3),
+                new FarmUnit('Rebel Officer Leia Organa', 7, 13, 3),
+                new FarmUnit('Wampa', 7, 13, 3),
+            ],
+            [
+                new FarmUnit('Han\'s Millennium Falcon', 7),
+                new FarmUnit('Wedge Antilles\'s X-wing', 7),
+            ],
+        ),
         new Farm(
             'General Anakin Skywalker',
             'event',
@@ -26,24 +46,25 @@ export default new FarmCategory(
             ],
         ),
         new Farm(
-            'Jedi Knight Luke Skywalker',
+            'Darth Malak',
             'event',
-            'light',
+            'dark',
             [
-                new FarmUnit('C-3PO', 7, 13, 3),
-                new FarmUnit('Captain Han Solo', 7, 13, 3),
-                new FarmUnit('Chewbacca', 7, 13, 3),
-                new FarmUnit('Commander Luke Skywalker', 7, 13, 3),
-                new FarmUnit('Darth Vader', 7, 13, 3),
-                new FarmUnit('Hermit Yoda', 7, 13, 3),
-                new FarmUnit('Lando Calrissian', 7, 13, 3),
-                new FarmUnit('Rebel Officer Leia Organa', 7, 13, 3),
-                new FarmUnit('Wampa', 7, 13, 3),
+                new FarmUnit('Bastila Shan', 7),
+                new FarmUnit('Jolee Bindo', 7),
+                new FarmUnit('Mission Vao', 7),
+                new FarmUnit('T3-M4', 7),
+                new FarmUnit('Zaalbar', 7),
+                new FarmUnit('Jedi Knight Revan', 7),
+                spacer,
+                new FarmUnit('Bastila Shan (Fallen)', 7),
+                new FarmUnit('Carth Onasi', 7),
+                new FarmUnit('Canderous Ordo', 7),
+                new FarmUnit('HK-47', 7),
+                new FarmUnit('Juhani', 7),
+                new FarmUnit('Darth Revan', 7),
             ],
-            [
-                new FarmUnit('Han\'s Millennium Falcon', 7),
-                new FarmUnit('Wedge Antilles\'s X-wing', 7),
-            ],
+            [],
         ),
     ]
 )

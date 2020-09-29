@@ -1,4 +1,6 @@
 <script>
+    import { spacer } from '../things/farm-unit';
+
     import FarmUnit from './FarmUnit.svelte'
 
     export let farm
@@ -29,7 +31,7 @@
     }
 </style>
 
-<table class="striped">
+<table>
     <colgroup span="2"></colgroup>
     <colgroup span="3" class="stars"></colgroup>
     <colgroup span="3" class="gear"></colgroup>
@@ -49,8 +51,11 @@
         {#each farm.units as unit}
             <FarmUnit farmUnit={unit} />
         {/each}
-        {#each farm.ships as ship}
-            <FarmUnit farmUnit={ship} />
-        {/each}
+        {#if farm.ships.length > 0}
+            <FarmUnit farmUnit={spacer} />
+            {#each farm.ships as ship}
+                <FarmUnit farmUnit={ship} />
+            {/each}
+        {/if}
     </tbody>
 </table>

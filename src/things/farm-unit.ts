@@ -11,3 +11,5 @@ export class FarmUnit {
         this.relic_level = relic_level
     }
 }
+
+export const spacer = new FarmUnit('Darth Revan', 0)

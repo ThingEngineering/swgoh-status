@@ -26,7 +26,7 @@ export default new FarmCategory(
             ],
         ),
         new Farm(
-            'General Anakin Skywalker',
+            'General Skywalker',
             'event',
             'light',
             [

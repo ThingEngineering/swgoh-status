@@ -1,6 +1,6 @@
-import { Farm } from '../things/farm'
-import { FarmUnit } from '../things/farm-unit'
-import { FarmCategory } from '../things/farm-category'
+import {Farm} from '../things/farm'
+import {FarmUnit} from '../things/farm-unit'
+import {FarmCategory} from '../things/farm-category'
 
 export default new FarmCategory(
     'Galactic Legends',
@@ -50,6 +50,30 @@ export default new FarmCategory(
             ],
         ),
         new Farm(
+            'Sith Eternal Emperor',
+            'legend',
+            'dark',
+            [
+                new FarmUnit('Admiral Piett', 7, 13, 5),
+                new FarmUnit('Colonel Starck', 7, 13, 3),
+                new FarmUnit('Count Dooku', 7, 13, 6),
+                new FarmUnit('Darth Maul', 7, 13, 4),
+                new FarmUnit('Darth Sidious', 7, 13, 7),
+                new FarmUnit('Darth Vader', 7, 13, 7),
+                new FarmUnit('Director Krennic', 7, 13, 4),
+                new FarmUnit('Emperor Palpatine', 7, 13, 7),
+                new FarmUnit('General Veers', 7, 13, 3),
+                new FarmUnit('Grand Admiral Thrawn', 7, 13, 6),
+                new FarmUnit('Grand Moff Tarkin', 7, 13, 3),
+                new FarmUnit('Jedi Knight Anakin', 7, 13, 7),
+                new FarmUnit('Royal Guard', 7, 13, 3),
+                new FarmUnit('Sith Marauder', 7, 13, 7),
+            ],
+            [
+                new FarmUnit('Imperial TIE Bomber', 6),
+            ],
+        ),
+        new Farm(
             'Jedi Master Luke Skywalker',
             'legend',
             'light',
@@ -71,30 +95,6 @@ export default new FarmCategory(
             ],
             [
                 new FarmUnit('Rebel Y-wing', 6),
-            ],
-        ),
-        new Farm(
-            'Eternal Emperor Palpatine',
-            'legend',
-            'dark',
-            [
-                new FarmUnit('Admiral Piett', 7, 13, 5),
-                new FarmUnit('Colonel Starck', 7, 13, 3),
-                new FarmUnit('Count Dooku', 7, 13, 6),
-                new FarmUnit('Darth Maul', 7, 13, 4),
-                new FarmUnit('Darth Sidious', 7, 13, 7),
-                new FarmUnit('Darth Vader', 7, 13, 7),
-                new FarmUnit('Director Krennic', 7, 13, 4),
-                new FarmUnit('Emperor Palpatine', 7, 13, 7),
-                new FarmUnit('General Veers', 7, 13, 3),
-                new FarmUnit('Grand Admiral Thrawn', 7, 13, 6),
-                new FarmUnit('Grand Moff Tarkin', 7, 13, 3),
-                new FarmUnit('Jedi Knight Anakin', 7, 13, 7),
-                new FarmUnit('Royal Guard', 7, 13, 3),
-                new FarmUnit('Sith Marauder', 7, 13, 7),
-            ],
-            [
-                new FarmUnit('Imperial TIE Bomber', 6),
             ],
         ),
     ]

@@ -1,54 +1,10 @@
 import {Farm} from '../things/farm'
-import {FarmUnit} from '../things/farm-unit'
 import {FarmCategory} from '../things/farm-category'
+import {FarmUnit} from '../things/farm-unit'
 
 export default new FarmCategory(
     'Galactic Legends',
     [
-        new Farm(
-            'Supreme Leader Kylo Ren',
-            'legend',
-            'dark',
-            [
-                new FarmUnit('Captain Phasma', 7, 13, 5),
-                new FarmUnit('Emperor Palpatine', 7, 13, 7),
-                new FarmUnit('First Order Executioner', 7, 13, 5),
-                new FarmUnit('First Order Officer', 7, 13, 5),
-                new FarmUnit('First Order SF TIE Pilot', 7, 13, 3),
-                new FarmUnit('First Order Stormtrooper', 7, 13, 5),
-                new FarmUnit('First Order TIE Pilot', 7, 13, 3),
-                new FarmUnit('General Hux', 7, 13, 5),
-                new FarmUnit('Kylo Ren', 7, 13, 7),
-                new FarmUnit('Kylo Ren (Unmasked)', 7, 13, 7),
-                new FarmUnit('Sith Trooper', 7, 13, 5),
-                new FarmUnit('Veteran Smuggler Han Solo', 7, 13, 3),
-            ],
-            [
-                new FarmUnit('Finalizer', 5),
-            ],
-        ),
-        new Farm(
-            'Rey',
-            'legend',
-            'light',
-            [
-                new FarmUnit('Amilyn Holdo', 7, 13, 5),
-                new FarmUnit('BB-8', 7, 13, 7),
-                new FarmUnit('Finn', 7, 13, 5),
-                new FarmUnit('Poe Dameron', 7, 13, 5),
-                new FarmUnit('Resistance Hero Finn', 7, 13, 5),
-                new FarmUnit('Resistance Hero Poe', 7, 13, 5),
-                new FarmUnit('Resistance Pilot', 7, 13, 3),
-                new FarmUnit('Resistance Trooper', 7, 13, 5),
-                new FarmUnit('Rey (Jedi Training)', 7, 13, 7),
-                new FarmUnit('Rey (Scavenger)', 7, 13, 7),
-                new FarmUnit('Rose Tico', 7, 13, 5),
-                new FarmUnit('Veteran Smuggler Chewbacca', 7, 13, 3),
-            ],
-            [
-                new FarmUnit('Raddus', 5),
-            ],
-        ),
         new Farm(
             'Sith Eternal Emperor',
             'legend',
@@ -95,6 +51,50 @@ export default new FarmCategory(
             ],
             [
                 new FarmUnit('Rebel Y-wing', 6),
+            ],
+        ),
+        new Farm(
+            'Supreme Leader Kylo Ren',
+            'legend',
+            'dark',
+            [
+                new FarmUnit('Captain Phasma', 7, 13, 5),
+                new FarmUnit('Emperor Palpatine', 7, 13, 7),
+                new FarmUnit('First Order Executioner', 7, 13, 5),
+                new FarmUnit('First Order Officer', 7, 13, 5),
+                new FarmUnit('First Order SF TIE Pilot', 7, 13, 3),
+                new FarmUnit('First Order Stormtrooper', 7, 13, 5),
+                new FarmUnit('First Order TIE Pilot', 7, 13, 3),
+                new FarmUnit('General Hux', 7, 13, 5),
+                new FarmUnit('Kylo Ren', 7, 13, 7),
+                new FarmUnit('Kylo Ren (Unmasked)', 7, 13, 7),
+                new FarmUnit('Sith Trooper', 7, 13, 5),
+                new FarmUnit('Veteran Smuggler Han Solo', 7, 13, 3),
+            ],
+            [
+                new FarmUnit('Finalizer', 5),
+            ],
+        ),
+        new Farm(
+            'Rey',
+            'legend',
+            'light',
+            [
+                new FarmUnit('Amilyn Holdo', 7, 13, 5),
+                new FarmUnit('BB-8', 7, 13, 7),
+                new FarmUnit('Finn', 7, 13, 5),
+                new FarmUnit('Poe Dameron', 7, 13, 5),
+                new FarmUnit('Resistance Hero Finn', 7, 13, 5),
+                new FarmUnit('Resistance Hero Poe', 7, 13, 5),
+                new FarmUnit('Resistance Pilot', 7, 13, 3),
+                new FarmUnit('Resistance Trooper', 7, 13, 5),
+                new FarmUnit('Rey (Jedi Training)', 7, 13, 7),
+                new FarmUnit('Rey (Scavenger)', 7, 13, 7),
+                new FarmUnit('Rose Tico', 7, 13, 5),
+                new FarmUnit('Veteran Smuggler Chewbacca', 7, 13, 3),
+            ],
+            [
+                new FarmUnit('Raddus', 5),
             ],
         ),
     ]

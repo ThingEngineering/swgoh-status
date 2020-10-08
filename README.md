@@ -1,7 +1,6 @@
 # SW:GoH Status
 
-A simple web app to show event farming status for Star Wars: Galaxy of Heroes players.
-Written in [TypeScript](https://www.typescriptlang.org/) and [Svelte](https://svelte.dev)
+A simple web app to show event farming status for Star Wars: Galaxy of Heroes players using the [SWGOH.GG](https://swgoh.gg) API. Written in [TypeScript](https://www.typescriptlang.org/) and [Svelte](https://svelte.dev)
 because I felt like learning some new things.
 
 Live version: https://swgoh.freddie.wtf
@@ -17,10 +16,10 @@ Live version: https://swgoh.freddie.wtf
 
 Almost everything lives under `src/`:
 
-- `App.svelte` - the "base" Svelte component which defines the initial page structure
-- `main.ts` - the TypeScript entry point, just creates the App component
-- `components/` - Svelte components, or related CSS/HTML/JS in a single file
-- `data/` - static data, currently just the requirements for Galactic Legends
-- `stores/` - data stores, a way to abstract retrieving/caching/accessing data from
-  [swgoh.gg](https://swgoh.gg)
+- `main.ts` - the TypeScript entry point, creates the App component
+- `App.svelte` - the "base" Svelte component, defines the initial page structure
+- `components/` - Svelte components (CSS/HTML/JS in a single file)
+- `data/` - static data, currently just farm requirements
+- `stores/` - data stores (abstracts retrieving/caching/accessing data)
+- `things/` - classes, mostly
 - `utils/` - various utility functions

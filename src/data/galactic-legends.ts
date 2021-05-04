@@ -6,6 +6,20 @@ export default new FarmCategory(
     'Galactic Legends',
     [
         new Farm(
+            'Stupid Sexy Kenobi',
+            'legend',
+            'light',
+            [
+                new FarmUnit('Aayla Secura', 7, 13, 3),
+                new FarmUnit('Bo-Katan Kryze', 7, 13, 5),
+                new FarmUnit('General Kenobi', 7, 13, 8),
+                new FarmUnit('Mace Windu', 7, 13, 3),
+            ],
+            [
+                new FarmUnit('Negotiator', 6),
+            ],
+        ),
+        new Farm(
             'Sith Eternal Emperor',
             'legend',
             'dark',

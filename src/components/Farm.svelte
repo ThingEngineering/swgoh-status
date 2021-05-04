@@ -48,18 +48,18 @@
 
 <table>
     <colgroup span="2"></colgroup>
-    <colgroup span="3" class="stars"></colgroup>
-    <colgroup span="3" class="gear"></colgroup>
-    <colgroup span="3" class="relic"></colgroup>
+    <colgroup span="1" class="stars"></colgroup>
+    <colgroup span="1" class="gear"></colgroup>
+    <colgroup span="1" class="relic"></colgroup>
     <thead>
         <tr>
             <td colspan="11" class="{farm.side}">{farm.name}<span class:has={hasUnit}>{hasUnit ? '✔' : '✖'}</span></td>
         </tr>
         <tr>
             <th colspan="2">Name</th>
-            <th colspan="3">Stars</th>
-            <th colspan="3">Gear</th>
-            <th colspan="3">Relic</th>
+            <th>Stars</th>
+            <th>Gear</th>
+            <th>Relic</th>
         </tr>
     </thead>
     <tbody>

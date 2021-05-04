@@ -57,6 +57,36 @@
     td {
         text-align: right;
     }
+    td.numbers {
+        padding: 0;
+        text-align: center;
+        width: 3.5rem;
+
+        span {
+            display: inline-block;
+
+            &:first-child {
+                text-align: right;
+                width: 1.1rem;
+            }
+            &:last-child {
+                text-align: left;
+                width: 1.1rem;
+            }
+        }
+    }
+    td.numbers2 {
+        width: 4.0rem;
+
+        span {
+            &:first-child {
+                width: 1.4rem;
+            }
+            &:last-child {
+                width: 1.4rem;
+            }
+        }
+    }
     .left {
         padding-right: 0;
     }
@@ -98,25 +128,31 @@
                 <td class="name {farmUnit.gear_level ? `success-${hasCount}` : (hasStars ? 'success' : 'success-2')}">
                     <a href="{gameUnit.url}">{farmUnit.name}</a>
                 </td>
-                <td class="left {hasStars ? 'success' : 'missing'}">{playerUnit.rarity}</td>
-                <td class="slash {hasStars ? 'success' : 'missing'}">/</td>
-                <td class="right {hasStars ? 'success' : 'missing'}">{farmUnit.stars}</td>
+                <td class="numbers {hasStars ? 'success' : 'missing'}">
+                    <span>{playerUnit.rarity}</span>
+                    <span>/</span>
+                    <span>{farmUnit.stars}</span>
+                </td>
                 {#if farmUnit.gear_level}
-                    <td class="left {hasGear ? 'success' : 'missing'}">{playerUnit.gear_level}</td>
-                    <td class="slash {hasGear ? 'success' : 'missing'}">/</td>
-                    <td class="right {hasGear ? 'success' : 'missing'}">{farmUnit.gear_level}</td>
+                    <td class="numbers numbers2 {hasGear ? 'success' : 'missing'}">
+                        <span>{playerUnit.gear_level}</span>
+                        <span>/</span>
+                        <span>{farmUnit.gear_level}</span>
+                    </td>
                     {#if farmUnit.relic_level}
-                        <td class="left {hasRelic ? 'success' : 'missing'}">{playerUnit.gear_level >= 13 ? playerUnit.relic_tier - 2 : 0}</td>
-                        <td class="slash {hasRelic ? 'success' : 'missing'}">/</td>
-                        <td class="right {hasRelic ? 'success' : 'missing'}">{farmUnit.relic_level}</td>
+                        <td class="numbers {hasRelic ? 'success' : 'missing'}">
+                            <span>{playerUnit.gear_level >= 13 ? playerUnit.relic_tier - 2 : 0}</span>
+                            <span>/</span>
+                            <span>{farmUnit.relic_level}</span>
+                        </td>
                     {:else}
-                        <td colspan="3" class="success"></td>
+                        <td class="success"></td>
                     {/if}
                 {:else}
-                    <td colspan="6" class:success="{hasStars}"></td>
+                    <td colspan="2" class:success="{hasStars}"></td>
                 {/if}
             {:else}
-                <td colspan="10" class="name">
+                <td colspan="4" class="name">
                     <a href="{gameUnit.url}">{farmUnit.name}</a>
                 </td>
             {/if}

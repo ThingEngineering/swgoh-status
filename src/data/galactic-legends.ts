@@ -12,8 +12,12 @@ export default new FarmCategory(
             [
                 new FarmUnit('Aayla Secura', 7, 13, 3),
                 new FarmUnit('Bo-Katan Kryze', 7, 13, 5),
+                new FarmUnit('Clone Sergeant - Phase I', 7, 13, 5),
+                new FarmUnit('General Grievous', 7, 13, 7),
                 new FarmUnit('General Kenobi', 7, 13, 8),
+                new FarmUnit('IG-100 Magnaguard', 7, 13, 5),
                 new FarmUnit('Mace Windu', 7, 13, 3),
+                new FarmUnit('Wat Tambor', 7, 13, 7),
             ],
             [
                 new FarmUnit('Negotiator', 6),

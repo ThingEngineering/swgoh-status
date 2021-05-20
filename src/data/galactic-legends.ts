@@ -17,6 +17,7 @@ export default new FarmCategory(
                 new FarmUnit('General Kenobi', 7, 13, 8),
                 new FarmUnit('IG-100 MagnaGuard', 7, 13, 5),
                 new FarmUnit('Mace Windu', 7, 13, 3),
+                new FarmUnit('Qui-Gon Jinn', 7, 13, 3),
                 new FarmUnit('Wat Tambor', 7, 13, 7),
             ],
             [

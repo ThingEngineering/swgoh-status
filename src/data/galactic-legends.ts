@@ -6,18 +6,23 @@ export default new FarmCategory(
     'Galactic Legends',
     [
         new Farm(
-            'Stupid Sexy Kenobi',
+            'Jedi Master Kenobi',
             'legend',
             'light',
             [
                 new FarmUnit('Aayla Secura', 7, 13, 3),
                 new FarmUnit('Bo-Katan Kryze', 7, 13, 5),
+                new FarmUnit('Cad Bane', 7, 13, 5),
+                new FarmUnit('CC-2224 "Cody"', 7, 13, 5),
                 new FarmUnit('Clone Sergeant - Phase I', 7, 13, 5),
                 new FarmUnit('General Grievous', 7, 13, 7),
                 new FarmUnit('General Kenobi', 7, 13, 8),
+                new FarmUnit('Grand Master Yoda', 7, 13, 8),
                 new FarmUnit('IG-100 MagnaGuard', 7, 13, 5),
+                new FarmUnit('Jango Fett', 7, 13, 7),
                 new FarmUnit('Mace Windu', 7, 13, 3),
                 new FarmUnit('Qui-Gon Jinn', 7, 13, 3),
+                new FarmUnit('Shaak Ti', 7, 13, 7),
                 new FarmUnit('Wat Tambor', 7, 13, 7),
             ],
             [

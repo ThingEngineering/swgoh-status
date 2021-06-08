@@ -23,7 +23,7 @@
     "@tsconfig/svelte": "^1.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "node-sass": "^4.14.1",
     "posthtml": "^0.13.3",
     "posthtml-hash": "^1.1.1",

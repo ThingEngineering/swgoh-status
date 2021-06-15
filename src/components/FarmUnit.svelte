@@ -7,9 +7,10 @@
     const playerUnit = $units[farmUnit.name]
     const gameUnit = $characters[farmUnit.name] ?? $ships[farmUnit.name]
     const side = {'Light Side': 'light', 'Dark Side': 'dark'}[gameUnit.alignment]
-    console.log(gameUnit.name, gameUnit.alignment, side)
+    console.log(gameUnit.name, playerUnit)
 
     const hasStars = playerUnit && (playerUnit.rarity >= farmUnit.stars)
+    const almostHasGear = farmUnit.gear_level && (playerUnit && (farmUnit.gear_level - playerUnit.gear_level === 1))
     const hasGear = !farmUnit.gear_level || (playerUnit && (playerUnit.gear_level >= farmUnit.gear_level))
     const hasRelic = !farmUnit.gear_level || !farmUnit.relic_level || (playerUnit && (playerUnit.gear_level >= 13 && ((playerUnit.relic_tier - 2) >= farmUnit.relic_level)))
 
@@ -24,8 +25,8 @@
         background: #383b3f;
     }
     td {
-        border-top: 1px solid #585b5f;
-        border-bottom: 1px solid #585b5f;
+        border-top: 1px solid #181b1f;
+        border-bottom: 1px solid #181b1f;
         line-height: 1;
         padding: 0 0.25em;
         white-space: nowrap;
@@ -49,7 +50,7 @@
         color: #EEE;
     }
     .missing-character {
-        background: rgba(255, 0, 0, 0.8) !important;
+        background: rgba(255, 0, 0, 0.7) !important;
     }
     td.name {
         text-align: left;
@@ -58,6 +59,7 @@
         text-align: right;
     }
     td.numbers {
+        position: relative;
         padding: 0;
         text-align: center;
         width: 3.5rem;
@@ -74,9 +76,55 @@
                 width: 1.1rem;
             }
         }
+
+        > div {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            > div {
+                border: 1px solid #181b1f;
+                bottom: -1px;
+                height: 7px;
+                position: absolute;
+                width: 10px;
+
+                &:nth-child(1) {
+                    left: -1px;
+                }
+
+                &:nth-child(2) {
+                    left: 10px;
+                }
+
+                &:nth-child(3) {
+                    left: 21px;
+                }
+
+                &:nth-child(4) {
+                    left: 32px;
+                }
+
+                &:nth-child(5) {
+                    left: 43px;
+                }
+
+                &:nth-child(6) {
+                    left: 54px;
+                }
+
+                &.missing {
+                    background: rgba(255, 0, 0, 0.5);
+                }
+                &.success {
+                    background: rgba(31, 255, 112, 0.5);
+                }
+            }
+        }
     }
     td.numbers2 {
-        width: 4.0rem;
+        width: calc(4.0rem + 1px);
 
         span {
             &:first-child {
@@ -134,10 +182,17 @@
                     <span>{farmUnit.stars}</span>
                 </td>
                 {#if farmUnit.gear_level}
-                    <td class="numbers numbers2 {hasGear ? 'success' : 'missing'}">
+                    <td class="numbers numbers2 {hasGear ? 'success' : (almostHasGear ? 'success-2' : 'missing')}">
                         <span>{playerUnit.gear_level}</span>
                         <span>/</span>
                         <span>{farmUnit.gear_level}</span>
+                        {#if !hasGear}
+                            <div>
+                                {#each Array(6) as _, i}
+                                    <div class="{playerUnit.gear[i].is_obtained ? 'success' : 'missing'}"></div>
+                                {/each}
+                            </div>
+                        {/if}
                     </td>
                     {#if farmUnit.relic_level}
                         <td class="numbers {hasRelic ? 'success' : 'missing'}">

@@ -11,12 +11,12 @@
 
 <style type="text/scss">
     table {
-        border: 1px solid #585b5f;
+        border: 1px solid #181b1f;
         border-collapse: collapse;
         width: 27em;
     }
     colgroup {
-        border: 1px solid #585b5f;
+        border: 1px solid #181b1f;
     }
     thead td {
         position: relative;
@@ -35,7 +35,7 @@
         }
     }
     th {
-        border: 1px solid #585b5f;
+        border: 1px solid #181b1f;
         padding: 0.25em;
     }
     .dark {

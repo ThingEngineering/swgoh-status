@@ -67,5 +67,28 @@ export default new FarmCategory(
             ],
             [],
         ),
+        new Farm(
+            'Executor',
+            'event',
+            'dark',
+            [
+                new FarmUnit('Darth Vader', 7, 13, 7),
+                new FarmUnit('Admiral Piett', 7, 13, 8),
+                new FarmUnit('Boba Fett', 7, 13, 8),
+                new FarmUnit('TIE Fighter Pilot', 7, 13, 5),
+                new FarmUnit('Bossk', 7, 13, 5),
+                new FarmUnit('IG-88', 7, 13, 5),
+                new FarmUnit('Dengar', 7, 13, 5),
+                spacer,
+                new FarmUnit('Razor Crest', 7),
+                new FarmUnit('Slave I', 7),
+                new FarmUnit('IG-2000', 7),
+                new FarmUnit('Hound\'s Tooth', 7),
+                new FarmUnit('TIE Advanced x1', 7),
+                new FarmUnit('Imperial TIE Bomber', 7),
+                new FarmUnit('Imperial TIE Fighter', 7),
+            ],
+            [],
+        ),
     ]
 )

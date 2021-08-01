@@ -6,6 +6,22 @@ export default new FarmCategory(
     'Galactic Legends',
     [
         new Farm(
+            'Lord Vader',
+            'legend',
+            'dark',
+            [
+                new FarmUnit('Hunter', 7, 13, 5),
+                new FarmUnit('Tech', 7, 13, 5),
+                new FarmUnit('Wrecker', 7, 13, 5),
+                new FarmUnit('Tusken Raider', 7, 13, 5),
+                new FarmUnit('Padmé Amidala', 7, 13, 8),
+                new FarmUnit('General Skywalker', 7, 13, 8),
+            ],
+            [
+                // new FarmUnit('Negotiator', 6),
+            ],
+        ),
+        new Farm(
             'Jedi Master Kenobi',
             'legend',
             'light',

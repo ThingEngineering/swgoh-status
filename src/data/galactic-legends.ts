@@ -16,6 +16,11 @@ export default new FarmCategory(
                 new FarmUnit('Tusken Raider', 7, 13, 5),
                 new FarmUnit('Padmé Amidala', 7, 13, 8),
                 new FarmUnit('General Skywalker', 7, 13, 8),
+                new FarmUnit('Embo', 7, 13, 5),
+                new FarmUnit('CT-21-0408 "Echo"', 7, 13, 7),
+                new FarmUnit('Echo', 7, 13, 5),
+                new FarmUnit('Count Dooku', 7, 13, 8),
+                new FarmUnit('Zam Wesell', 7, 13, 7),
             ],
             [
                 // new FarmUnit('Negotiator', 6),

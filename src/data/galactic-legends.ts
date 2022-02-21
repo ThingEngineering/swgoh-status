@@ -6,6 +6,20 @@ export default new FarmCategory(
     'Galactic Legends',
     [
         new Farm(
+            'Starkiller',
+            'legend',
+            'dark',
+            [
+                new FarmUnit('Dash Rendar', 7, 13, 5),
+                new FarmUnit('Kyle Katarn', 7, 13, 5),
+                new FarmUnit('Darth Talon', 7, 13, 5),
+                new FarmUnit('Mara Jade, The Emperor's Hand', 7, 13, 5),
+                
+            ],
+            [
+                new FarmUnit('BTL-B Y-wing Starfighter', 7),
+            ],
+        ),new Farm(
             'Lord Vader',
             'legend',
             'dark',

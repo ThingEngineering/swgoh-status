@@ -9,6 +9,7 @@
 
 <style>
     section {
+        align-items: flex-start;
         display: grid;
         grid-template-columns: repeat(auto-fill, 27em);
         grid-gap: 2em;

@@ -10,10 +10,10 @@ export default new FarmCategory(
             'event',
             'dark',
             [
+                new FarmUnit('Darth Talon', 7, 13, 5),
                 new FarmUnit('Dash Rendar', 7, 13, 5),
                 new FarmUnit('Kyle Katarn', 7, 13, 5),
-                new FarmUnit('Darth Talon', 7, 13, 5),
-                new FarmUnit('Mara Jade', 7, 13, 5),
+                new FarmUnit('Mara Jade, The Emperor\'s Hand', 7, 13, 5),
             ],
             [],
         ),

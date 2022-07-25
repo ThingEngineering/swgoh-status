@@ -6,6 +6,19 @@ export default new FarmCategory(
     'Events',
     [
         new Farm(
+            'Grand Inquisitor',
+            'event',
+            'dark',
+            [
+                new FarmUnit('Second Sister', 7, 13, 5),
+                new FarmUnit('Ninth Sister', 7, 13, 5),
+                new FarmUnit('Seventh Sister', 7, 13, 5),
+                new FarmUnit('Eighth Brother', 7, 13, 5),
+                new FarmUnit('Fifth Brother', 7, 13, 5),
+            ],
+            [],
+        ),
+        new Farm(
             'Starkiller',
             'event',
             'dark',

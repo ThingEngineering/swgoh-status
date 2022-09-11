@@ -9,7 +9,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv build",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "heroku-postbuild": "rollup -c"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",

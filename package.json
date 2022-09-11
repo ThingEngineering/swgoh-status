@@ -1,6 +1,9 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "swgohstatus",
+  "version": "1.0.1",
+  "engines": {
+    "node": "14.20.0"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",

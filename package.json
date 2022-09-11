@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv build",
+    "start": "sirv build --port process.env.PORT || 5000",
     "validate": "svelte-check"
   },
   "devDependencies": {

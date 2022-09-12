@@ -15,7 +15,8 @@ const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-	
+	const PORT = process.env.PORT || 5000;
+
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -25,7 +26,9 @@ function serve() {
 			if (server) return;
 			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
 				stdio: ['ignore', 'inherit', 'inherit'],
-				shell: true
+				shell: true,
+				host: "0.0.0.0",
+				port: PORT
 			});
 
 			process.on('SIGTERM', toExit);

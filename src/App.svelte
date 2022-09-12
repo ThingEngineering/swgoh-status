@@ -38,6 +38,8 @@
 <Header />
 {#if $gameError || $playerError}
 	<p>KABOOM! Something has gone horribly wrong, try reloading the page?</p>
+	<p>Game error: {$gameError}</p>
+	<p>Player error: {$playerError}</p>
 {:else if $gameLoading || $playerLoading}
 	<p>LOADING</p>
 {:else}

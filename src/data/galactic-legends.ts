@@ -13,7 +13,7 @@ export default new FarmCategory(
                 new FarmUnit('Aurra Sing', 7, 13, 6),
                 new FarmUnit('Boba Fett', 7, 13, 7),
                 new FarmUnit('Boushh (Leia Organa)', 7, 13, 5),
-                new FarmUnit('C-3PO', 7, 13, 5),
+                new FarmUnit('C-3PO', 7, 13, 7),
                 new FarmUnit('Fennec Shand', 7, 13, 7),
                 new FarmUnit('Greedo', 7, 13, 6),
                 new FarmUnit('Gamorrean Guard', 7, 13, 3),

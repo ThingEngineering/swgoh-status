@@ -6,6 +6,18 @@ export default new FarmCategory(
     'Events',
     [
         new Farm(
+            'Doctor Aphra',
+            'event',
+            'dark',
+            [
+                new FarmUnit('0-0-0', 7, 13, 5),
+                new FarmUnit('BT-1', 7, 13, 5),
+                new FarmUnit('Hondo Ohnaka', 7, 13, 5),
+                new FarmUnit('Sana Starros', 7, 13, 5),
+            ],
+            [],
+        ),
+        new Farm(
             'Grand Inquisitor',
             'event',
             'dark',

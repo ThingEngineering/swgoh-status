@@ -15,7 +15,6 @@ const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-	const PORT = process.env.PORT || 5000;
 
 	function toExit() {
 		if (server) server.kill(0);

@@ -35,7 +35,7 @@
 	}
 </style>
 
-<svelte:head />
+<Header />
 {#if $gameError || $playerError}
 	<p>KABOOM! Something has gone horribly wrong, try reloading the page?</p>
 {:else if $gameLoading || $playerLoading}

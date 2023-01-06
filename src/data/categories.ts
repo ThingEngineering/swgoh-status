@@ -7,8 +7,8 @@ import { FarmCategory } from '../things/farm-category'
 
 export const categories = [
     legends,
-    fleets,
     events,
+    fleets,
 ]
 
 export const flat_categories = [

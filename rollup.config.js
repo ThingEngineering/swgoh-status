@@ -3,6 +3,7 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
+import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
@@ -15,7 +16,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-
+	
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -25,9 +26,7 @@ function serve() {
 			if (server) return;
 			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
 				stdio: ['ignore', 'inherit', 'inherit'],
-				shell: true,
-				host: "0.0.0.0",
-				port: PORT
+				shell: true
 			});
 
 			process.on('SIGTERM', toExit);
@@ -44,10 +43,10 @@ function hashAssets() {
 		},
 		writeBundle() {
 			posthtml([
-				hash({ path: 'build/' }),
+				hash({ path: 'build' }),
 			])
-			.process(fs.readFileSync('./build/index.html'))
-			.then((result) => fs.writeFileSync('./build/index.html', result.html));
+			.process(fs.readFileSync('build/index.html'))
+			.then((result) => fs.writeFileSync('build/index.html', result.html));
 		}
 	}
 }
@@ -55,10 +54,10 @@ function hashAssets() {
 export default {
 	input: 'src/main.ts',
 	output: {
-		sourcemap: !production,
+		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'build/bundle.[hash].js'
+		file: 'public/build/bundle.[hash].js'
 	},
 	plugins: [
 		copy({
@@ -73,7 +72,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
-				css.write('bundle.[hash].css', !production);
+				css.write('bundle.[hash].css');
 			},
 			preprocess: sveltePreprocess(),
 		}),
@@ -92,6 +91,7 @@ export default {
 			sourceMap: !production,
 			inlineSources: !production
 		}),
+		postcss(),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated

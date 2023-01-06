@@ -18,7 +18,7 @@ export const fetch = async function() {
 
 async function loadData(key: string, thingStore: Writable<{}>) {
     const data = await getCachedData(key, 86400000, async () => {
-        return await fetch_json(`http://api.swgoh.gg/${key}/`)
+        return await fetch_json(`https://api.swgoh.gg/${key}/`)
     })
     if (data === null) {
         error.set(true)

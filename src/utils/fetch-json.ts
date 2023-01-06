@@ -1,5 +1,5 @@
 export default async function fetch_json(request: string): Promise<string> {
-    request = `https://cors-anywhere.freddie.wtf/${request}`
+    // request = `https://cors-anywhere.swgohstatus.com/${request}`
     return fetch(request)
         .then(response => {
             if (response.ok) {

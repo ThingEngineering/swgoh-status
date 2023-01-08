@@ -22,7 +22,7 @@
 <footer>
     <div>
         <p>
-            <a href="https://github.com/ThingEngineering/swgoh-status">GitHub project</a>
+            <a href="https://github.com/dinkatoid/swgoh-status">GitHub project</a>
         </p>
         <p>SWGoH Status is not affiliated with EA, EA Capital Games, Disney, or Lucasfilm LTD.</p>
     </div>

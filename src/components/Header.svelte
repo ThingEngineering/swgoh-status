@@ -50,7 +50,8 @@
         color: #eee;
     }
     button:disabled {
-        color: #888;
+        color: #d3d3d3;
+        background: #696969;
     }
 </style>
 

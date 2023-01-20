@@ -18,6 +18,7 @@ export default new FarmCategory(
                 new FarmUnit('Greedo', 7, 13, 6),
                 new FarmUnit('Gamorrean Guard', 7, 13, 3),
                 new FarmUnit('Han Solo', 7, 13, 8),
+                new FarmUnit('Jawa', 7, 13, 3),
                 new FarmUnit('Jedi Knight Luke Skywalker', 7, 13, 7),
                 new FarmUnit('Krrsantan', 7, 13, 5),
                 new FarmUnit('Mob Enforcer', 7, 13, 3),

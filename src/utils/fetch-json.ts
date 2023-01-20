@@ -1,10 +1,10 @@
 export default async function fetch_json(request: string): Promise<string> {
     // request = `https://cors-anywhere.swgohstatus.com/${request}`
     request = `https://proxy.cors.sh/${request}`
-    let requestFull = new Request(request)
-    requestFull.headers.append('X-Requested-With',"fetch")
-    requestFull.headers.append('Origin',"https://swgohstatus.com")
-    return fetch(requestFull)
+    let fetchRequest = new Request(request)
+    fetchRequest.headers.append('X-Requested-With',"fetch")
+    fetchRequest.headers.append('Origin',"https://swgohstatus.com")
+    return fetch(fetchRequest)
         .then(response => {
             if (response.ok) {
                 return response.text() ?? null

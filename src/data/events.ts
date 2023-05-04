@@ -6,6 +6,19 @@ export default new FarmCategory(
     'Events',
     [
         new Farm(
+            'Jedi Knight Cal Kestis',
+            'event',
+            'light',
+            [
+                new FarmUnit('Cal Kestis', 7, 12, 0),
+                new FarmUnit('Cere Junda', 7, 12, 0),
+                new FarmUnit('Merrin', 7, 12, 0),
+                new FarmUnit('Tarfful', 7, 12, 0),
+                new FarmUnit('Saw Gerrera', 7, 12, 0)
+            ],
+            [],
+        ),
+        new Farm(
             'Doctor Aphra',
             'event',
             'dark',

@@ -3,12 +3,14 @@ import { flatten, forEach, map } from 'lodash'
 import events from './events'
 import legends from './galactic-legends'
 import fleets from './fleets'
+import raids from './raids'
 import { FarmCategory } from '../things/farm-category'
 
 export const categories = [
     legends,
-    events,
     fleets,
+    events,
+    raids,
 ]
 
 export const flat_categories = [

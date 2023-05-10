@@ -3,7 +3,7 @@ import { FarmUnit, spacer } from '../things/farm-unit'
 import { FarmCategory } from '../things/farm-category'
 
 export default new FarmCategory(
-    'Events',
+    'Journey Guide',
     [
         new Farm(
             'Jedi Knight Cal Kestis',

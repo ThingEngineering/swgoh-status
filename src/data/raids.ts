@@ -1,6 +1,6 @@
 import {Farm} from '../things/farm'
 import {FarmCategory} from '../things/farm-category'
-import {FarmUnit} from '../things/farm-unit'
+import {FarmUnit, spacer} from '../things/farm-unit'
 
 export default new FarmCategory(
     'Krayt Dragon',
@@ -28,20 +28,22 @@ export default new FarmCategory(
                 new FarmUnit('The Armorer', 7, 13, 5),
                 new FarmUnit('Bo-Katan Kryze', 7, 13, 5),
                 new FarmUnit('Canderous Ordo', 7, 13, 5),
-                new FarmUnit('Jango Fett', 7, 13, 7),
+                new FarmUnit('The Mandalorian (Beskar Armor)', 7, 13, 7),
             ],
             [],
         ),
         new Farm(
-            'Beskar Mando Cheese',
+            'Old Republic',
             'raid',
             'light',
             [
-                new FarmUnit('The Mandalorian (Beskar Armor)', 7, 13, 7),
-                new FarmUnit('Greedo', 7, 13, 6),
-                new FarmUnit('Embo', 7, 13, 5),
-                new FarmUnit('Cad Bane', 7, 13, 5),
-                new FarmUnit('The Mandalorian', 7, 13, 5),
+                new FarmUnit('Jedi Knight Revan', 7, 13, 7),
+                new FarmUnit('Bastila Shan', 7, 13, 6),
+                new FarmUnit('Jolee Bindo', 7, 13, 5),
+                new FarmUnit('Mission Vao', 7, 13, 5),
+                new FarmUnit('Zaalbar', 7, 13, 5),
+                spacer,
+                new FarmUnit('50R-T', 7, 13, 5),
             ],
             [],
         ),

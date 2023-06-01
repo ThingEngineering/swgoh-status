@@ -4,12 +4,14 @@ import events from './events'
 import legends from './galactic-legends'
 import fleets from './fleets'
 import raids from './raids'
+import epicConfrontations from './epic-confrontations'
 import { FarmCategory } from '../things/farm-category'
 
 export const categories = [
     legends,
     fleets,
     events,
+    epicConfrontations,
     raids,
 ]
 

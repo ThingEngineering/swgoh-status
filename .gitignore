@@ -1,3 +1,15 @@
+/**
+ * This is a .gitignore file that specifies which files and directories should be ignored by Git.
+ * It is a common practice to ignore certain files and directories that are not necessary to be tracked by Git.
+ *
+ * The following items are ignored:
+ * - /build/ : This directory is typically used for build artifacts and should not be committed to the repository.
+ * - /node_modules/ : This directory contains the dependencies of the project and should not be committed to the repository.
+ * - /public/build/ : This directory is typically used for build artifacts of the public directory and should not be committed to the repository.
+ * - /.idea/ : This directory contains IntelliJ IDEA-specific settings and should not be committed to the repository.
+ * - .DS_Store : This is a hidden file created by macOS and should not be committed to the repository.
+ */
+
 /build/
 /node_modules/
 /public/build/

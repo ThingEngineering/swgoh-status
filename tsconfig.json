@@ -1,4 +1,18 @@
-{
+/**
+ * This file is a TypeScript configuration file for a Svelte project.
+ * It extends the default TypeScript configuration for Svelte projects
+ * provided by "@tsconfig/svelte".
+ *
+ * The purpose of this file is to customize the TypeScript configuration
+ * for the specific project by including certain files and excluding others.
+ *
+ * @param {string} extends - The path to the base TypeScript configuration file.
+ * @param {string[]} include - An array of file patterns to include in the compilation.
+ * @param {string[]} exclude - An array of file patterns to exclude from the compilation.
+ *
+ * @returns {Object} - An object containing the customized TypeScript configuration.
+ */
+ {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
   "include": ["src/**/*"],

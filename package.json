@@ -1,59 +1,202 @@
 {
+  /**
+   * The "type" field specifies the type of the package.
+   * In this case, it's set to "module", indicating that this package is an ES6 module.
+   */
+  "type": "module",
+
+  /**
+   * The "name" field is a string that specifies the name of the package.
+   * It's used to identify the package when it's installed and referenced in other projects.
+   */
   "name": "svelte-app",
+
+  /**
+   * The "version" field is a string that specifies the version of the package.
+   * It's used to track the changes and updates made to the package over time.
+   */
   "version": "1.0.0",
+
+  /**
+   * The "scripts" field is an object that contains a set of scripts that can be run using the "npm run" command.
+   * Each key in the object represents a script name, and the corresponding value is a command that can be executed in the terminal.
+   */
   "scripts": {
+    /**
+     * The "build" script runs the Rollup build process with the configuration file.
+     */
     "build": "rollup -c",
+
+    /**
+     * The "dev" script runs the Rollup build process with the configuration file in watch mode.
+     */
     "dev": "rollup -c -w",
+
+    /**
+     * The "start" script runs the "sirv" command to serve the built application.
+     */
     "start": "sirv build",
+
+    /**
+     * The "validate" script runs the "svelte-check" command to validate the Svelte code.
+     */
     "validate": "svelte-check"
   },
+
+  /**
+   * The "devDependencies" field is an object that contains a set of dependencies that are required for development purposes.
+   * These dependencies are not included in the final build and are only used during the development process.
+   */
   "devDependencies": {
-<<<<<<< Updated upstream
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^6.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0",
-    "svelte-check": "^1.0.0",
-    "svelte-preprocess": "^4.0.0",
-    "@rollup/plugin-typescript": "^6.0.0",
-    "typescript": "^3.9.3",
-    "tslib": "^2.0.0",
-    "@tsconfig/svelte": "^1.0.0"
-=======
+    /**
+     * The "@rollup/plugin-commonjs" dependency is a Rollup plugin that transforms CommonJS modules into ES6 modules.
+     */
     "@rollup/plugin-commonjs": "^25.0.7",
+
+    /**
+     * The "@rollup/plugin-node-resolve" dependency is a Rollup plugin that resolves node module dependencies.
+     */
     "@rollup/plugin-node-resolve": "^15.2.3",
+
+    /**
+     * The "@rollup/plugin-terser" dependency is a Rollup plugin that minifies the JavaScript code.
+     */
     "@rollup/plugin-terser": "^0.4.4",
+
+    /**
+     * The "@rollup/plugin-typescript" dependency is a Rollup plugin that transpiles TypeScript code into JavaScript.
+     */
     "@rollup/plugin-typescript": "^11.1.6",
+
+    /**
+     * The "@tsconfig/svelte" dependency is a TypeScript configuration file for Svelte projects.
+     */
     "@tsconfig/svelte": "^5.0.4",
+
+    /**
+     * The "@types/lodash" dependency is a TypeScript definition file for the Lodash library.
+     */
     "@types/lodash": "^4.17.4",
+
+    /**
+     * The "coffeescript" dependency is a compiler that transpiles CoffeeScript code into JavaScript.
+     */
     "coffeescript": "^2.7.0",
+
+    /**
+     * The "less" dependency is a CSS preprocessor that allows for more complex and modular CSS code.
+     */
     "less": "^4.2.0",
+
+    /**
+     * The "postcss" dependency is a tool that allows for transforming CSS code using plugins.
+     */
     "postcss": "^8.4.38",
+
+    /**
+     * The "postcss-load-config" dependency is a plugin that loads a PostCSS configuration file.
+     */
     "postcss-load-config": "^5.1.0",
+
+    /**
+     * The "pug" dependency is a template engine that allows for more complex and modular HTML code.
+     */
     "pug": "^3.0.2",
+
+    /**
+     * The "rollup" dependency is a module bundler that allows for bundling JavaScript code into smaller, more manageable files.
+     */
     "rollup": "^4.17.2",
+
+    /**
+     * The "rollup-plugin-livereload" dependency is a Rollup plugin that reloads the browser when changes are made to the code.
+     */
     "rollup-plugin-livereload": "^2.0.5",
+
+    /**
+     * The "rollup-plugin-svelte" dependency is a Rollup plugin that transpiles Svelte code into JavaScript.
+     */
     "rollup-plugin-svelte": "^7.2.0",
+
+    /**
+     * The "sass" dependency is a CSS preprocessor that allows for more complex and modular CSS code.
+     */
     "sass": "^1.77.2",
+
+    /**
+     * The "stylus" dependency is a CSS preprocessor that allows for more complex and modular CSS code.
+     */
     "stylus": "^0.63.0",
+
+    /**
+     * The "svelte" dependency is a framework for building modern web applications.
+     */
     "svelte": "^4.2.17",
+
+    /**
+     * The "svelte-check" dependency is a tool that validates Svelte code.
+     */
     "svelte-check": "^3.7.1",
+
+    /**
+     * The "svelte-preprocess" dependency is a tool that allows for preprocessing Svelte code.
+     */
     "svelte-preprocess": "^5.1.4",
+
+    /**
+     * The "tslib" dependency is a utility library for TypeScript.
+     */
     "tslib": "^2.6.2",
+
+    /**
+     * The "typescript" dependency is a programming language that builds on JavaScript and adds static typing.
+     */
     "typescript": "^5.4.5"
->>>>>>> Stashed changes
   },
+
+  /**
+   * The "dependencies" field is an object that contains a set of dependencies that are required for the project to run.
+   * These dependencies are included in the final build and are used when the application is served or executed.
+   */
   "dependencies": {
+    /**
+     * The "lodash" dependency is a utility library that provides a wide range of functions for working with arrays, objects, and strings.
+     */
     "lodash": "^4.17.21",
-    "node-sass": "^4.14.1",
-    "posthtml": "^0.13.3",
-    "posthtml-hash": "^1.1.1",
-    "rimraf": "^3.0.2",
-    "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-postcss": "^3.1.8",
-    "sirv-cli": "^1.0.0"
+
+    /**
+     * The "node-sass" dependency is a compiler that transpiles Sass code into CSS.
+     */
+    "node-sass": "^9.0.0",
+
+    /**
+     * The "posthtml" dependency is a tool that allows for transforming HTML code using plugins.
+     */
+    "posthtml": "^0.16.6",
+
+    /**
+     * The "posthtml-hash" dependency is a plugin that adds a unique hash to the HTML attributes.
+     */
+    "posthtml-hash": "^1.2.2",
+
+    /**
+     * The "rimraf" dependency is a utility library that allows for removing directories and their contents.
+     */
+    "rimraf": "^5.0.7",
+
+    /**
+     * The "rollup-plugin-copy" dependency is a Rollup plugin that copies files and directories to the build directory.
+     */
+    "rollup-plugin-copy": "^3.5.0",
+
+    /**
+     * The "rollup-plugin-postcss" dependency is a Rollup plugin that transpiles PostCSS code into CSS.
+     */
+    "rollup-plugin-postcss": "^4.0.2",
+
+    /**
+     * The "sirv-cli" dependency is a command-line interface for serving static files.
+     */
+    "sirv-cli": "^2.0.2"
   }
 }
